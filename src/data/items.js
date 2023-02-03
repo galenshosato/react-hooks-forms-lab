@@ -1,4 +1,4 @@
-const items = [
+const itemData = [
   { id: 1, name: "Yogurt", category: "Dairy" },
   { id: 2, name: "Pomegranate", category: "Produce" },
   { id: 3, name: "Lettuce", category: "Produce" },
@@ -7,4 +7,4 @@ const items = [
   { id: 6, name: "Cookies", category: "Dessert" },
 ];
 
-export default items;
+export default itemData;
