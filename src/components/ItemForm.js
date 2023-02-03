@@ -6,6 +6,15 @@ function ItemForm({onItemFormSubmit}) {
   const [itemName, setItemName] = useState('Name:')
   const [itemCategory, setNewCategory] = useState("Produce")
 
+  function onNameChange (event) {
+    setItemName(event.target.value)
+  }
+
+  function onFormCategoryChange (event) {
+    setNewCategory(event.target.value)
+  }
+
+
   const newItem = {
     id: uuid(),
     name: itemName,
@@ -25,12 +34,12 @@ function ItemForm({onItemFormSubmit}) {
     <form className="NewItem" onSubmit={createNewItem}>
       <label>
         Name:
-        <input type="text" name="name"  />
+        <input type="text" name="name" onChange={onNameChange} />
       </label>
 
       <label>
         Category:
-        <select name="category">
+        <select name="category" onChange={onFormCategoryChange}>
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
           <option value="Dessert">Dessert</option>
